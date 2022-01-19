@@ -1,1 +1,334 @@
-//
+@use "bootstrap";
+
+/* Variables */
+$brand_color: #0282f9;
+
+/* Common */
+.cont {
+    width: 1250px;
+}
+
+.fs_12 {
+    font-size: 12px;
+}
+
+.comic_cont {
+    width: 1012px;
+    margin: auto;
+}
+
+.col5 {
+    width: calc(100% / 5);
+    justify-content: center;
+    display: flex;
+}
+
+/* Site Header */
+#site_header {
+    .stripe {
+        background-color: $brand_color;
+        .container {
+            height: 25px;
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .head {
+        height: 120px;
+        margin: auto;
+
+        .logo {
+            width: 80px;
+        }
+
+        .menu {
+            .text_active {
+                color: $brand_color;
+            }
+            a {
+                margin: 1rem;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 14px;
+                color: black;
+                position: relative;
+            }
+
+            .active {
+                width: 100%;
+                height: 5px;
+                background-color: $brand_color;
+                position: absolute;
+                bottom: -51px;
+                left: 0;
+            }
+        }
+    }
+}
+
+/* Jumbo */
+.jumbo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Comics */
+.comics_content {
+    background-color: #1c1c1c;
+
+    .container {
+        position: relative;
+        .current_series {
+            width: 250px;
+            border: none;
+            background: $brand_color;
+            line-height: 52px;
+            vertical-align: middle;
+            position: absolute;
+            top: -31.5px;
+            left: 0;
+            a {
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bold;
+                font-size: 21px;
+            }
+        }
+
+        .card {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            padding: 14px;
+            padding-bottom: 0;
+            background: transparent;
+            img {
+                height: 180px;
+                width: 180px;
+                object-fit: cover;
+                object-position: top;
+            }
+            h6 {
+                padding-top: 23px;
+                color: white;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+        }
+
+        .load {
+            display: flex;
+            justify-content: center;
+            button {
+                margin-top: 50px;
+                width: 185px;
+                border: none;
+                background: $brand_color;
+                line-height: 36px;
+                vertical-align: middle;
+                margin-bottom: 20px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .banner {
+        height: 150px;
+        background-color: $brand_color;
+        z-index: 1;
+        position: relative;
+
+        .icon {
+            display: flex;
+            align-items: center;
+
+            p {
+                padding-left: 1rem;
+                margin-bottom: 0;
+                color: white;
+                font-size: 14px;
+            }
+            img {
+                height: 55px;
+            }
+        }
+        .row {
+            height: 150px;
+        }
+    }
+    .visa {
+        width: 55px;
+    }
+}
+
+/* Comic */
+.comic {
+    .comic_header {
+        height: 80px;
+        background-color: $brand_color;
+        .img_wrapper {
+            bottom: 20px;
+            border: 1px solid white;
+            font-size: 14px;
+            .comic_label {
+                top: 0px;
+                left: 0px;
+                background-color: #00a9d9;
+            }
+            .view {
+                bottom: 0px;
+                width: 100%;
+                background-color: #00a9d9;
+            }
+        }
+    }
+
+    .cmc_info {
+        margin-top: 80px;
+
+        .info_wrapper {
+            width: 66.6%;
+
+            .price_wrapper {
+                height: 47px;
+                background: #55ba59;
+
+                .price {
+                    width: 73%;
+                }
+
+                .check {
+                    width: 27%;
+                    height: 100%;
+                    line-height: 47px;
+                    border-left: 1px solid #357739;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        .adv {
+            top: -18px;
+            right: 0px;
+            font-size: 14px;
+            img {
+                display: block !important;
+            }
+        }
+    }
+
+    .specs_table {
+        margin-top: 80px;
+        background-color: #f6f6f6;
+        position: relative;
+        z-index: 30;
+        padding-bottom: 100px;
+
+        .tab {
+            span {
+                color: $brand_color;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/* Site Footer */
+#site_footer {
+    .links {
+        height: 400px;
+        background-image: url("../img/footer-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        .sub_cont {
+            padding-top: 20px;
+            width: 430px;
+            color: white;
+            h3 {
+                padding: 15px 0 7px 0;
+                font-size: 18px;
+            }
+            ul {
+                list-style: none;
+                padding-left: 0;
+                li {
+                    height: 21px;
+                    a {
+                        text-decoration: none;
+                        color: rgba(211, 211, 211, 0.473);
+                        font-size: 12px;
+
+                        &:hover {
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .rights {
+            font-size: 12px;
+            color: rgba(211, 211, 211, 0.473);
+            span {
+                color: $brand_color;
+            }
+        }
+
+        .container {
+            position: relative;
+        }
+        .logo_bg {
+            position: absolute;
+            right: 0;
+            top: -75px;
+        }
+    }
+    .site_end {
+        background-color: #303030;
+        height: 110px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            button {
+                background: transparent;
+                border-radius: 0px;
+                border: 2px solid $brand_color;
+                padding: 12px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+            .social_media {
+                width: 380px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h6 {
+                    font-size: 16px;
+                    color: $brand_color;
+                }
+            }
+        }
+    }
+}
