@@ -11264,6 +11264,11 @@ textarea.form-control-lg {
   display: flex;
 }
 
+.home_page {
+  position: relative;
+  z-index: 2;
+}
+
 /* Site Header */
 #site_header .stripe {
   background-color: #0282f9;

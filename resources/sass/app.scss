@@ -23,6 +23,11 @@ $brand_color: #0282f9;
     display: flex;
 }
 
+.home_page {
+    position: relative;
+    z-index: 2;
+}
+
 /* Site Header */
 #site_header {
     .stripe {
