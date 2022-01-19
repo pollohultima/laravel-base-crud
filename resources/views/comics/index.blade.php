@@ -13,7 +13,7 @@
                 @foreach ($comics as $comic)
                     <div class="col-2 px-0">
 
-                        <div class="card">
+                        <div class="card border-0">
                             <a class="text-decoration-none" href="{{ route('comics.show', $comic->id) }}">
                                 <img src="{{ $comic->thumb }}" alt="">
                                 <h6>{{ $comic->series }}</h6>
@@ -27,7 +27,7 @@
             </div>
             <div class="load">
                 <button>
-                    <a href="">LOAD MORE</a>
+                    <a href="{{ route('comics.create') }}">UPLOAD COMICS</a>
                 </button>
             </div>
         </div>
