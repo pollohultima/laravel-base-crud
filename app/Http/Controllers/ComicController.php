@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ComicController extends Controller
 {
@@ -27,7 +28,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -38,7 +39,17 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $_comic = new Comic();
+        $_comic -> title = $request -> title;
+        $_comic -> description = $request -> description;
+        $_comic -> thumb = $request -> thumb;
+        $_comic -> price = $request -> price;
+        $_comic -> series = $request -> series;
+        $_comic -> sale_date = $request -> sale_date;
+        $_comic -> type = $request -> type;
+        $_comic -> save();
+
+        return redirect()->route('comics.index');
     }
 
     /**

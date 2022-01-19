@@ -14,7 +14,7 @@
                     <div class="col-2 px-0">
 
                         <div class="card">
-                            <a class="text-decoration-none" href="{{ route('comic', $comic->id) }}">
+                            <a class="text-decoration-none" href="{{ route('comics.show', $comic->id) }}">
                                 <img src="{{ $comic->thumb }}" alt="">
                                 <h6>{{ $comic->series }}</h6>
                             </a>
