@@ -9,9 +9,11 @@
             <div class="comic_cont ">
                 <div class="img_wrapper position-absolute">
                     <div class="comic_label text-white text-uppercase position-absolute px-1">
-                        <span>{{ $comic['type'] }}</span>
+                        <span>{{ $comic->type }}</span>
                     </div>
-                    <img src="{{ $comic->thumb }}" alt="">
+                    <img style="
+        width: 200px;
+    " class="thumb_show" src="{{ $comic->thumb }}" alt="">
                     <div class="view text-center text-white position-absolute">
                         <span>VIEW GALLERY</span>
                     </div>
