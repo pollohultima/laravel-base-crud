@@ -46,25 +46,29 @@ $brand_color: #0282f9;
         }
 
         .menu {
-            .text_active {
-                color: $brand_color;
-            }
+            height: 100%;
+            padding-top: 5px;
+
             a {
-                margin: 1rem;
+                display: flex;
+                padding: 0 1rem;
+                align-items: center;
                 text-decoration: none;
                 font-weight: bold;
                 font-size: 14px;
                 color: black;
                 position: relative;
+                height: 100%;
+                border-bottom: 5px solid transparent;
+
+                &:hover {
+                    color: $brand_color;
+                }
             }
 
             .active {
-                width: 100%;
-                height: 5px;
-                background-color: $brand_color;
-                position: absolute;
-                bottom: -51px;
-                left: 0;
+                border-color: $brand_color;
+                color: $brand_color;
             }
         }
     }

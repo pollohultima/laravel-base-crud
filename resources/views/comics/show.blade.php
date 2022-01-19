@@ -5,12 +5,11 @@
 @section('content')
 
     <div class="comic">
-
         <div class="comic_header position-relative">
             <div class="comic_cont ">
                 <div class="img_wrapper position-absolute">
                     <div class="comic_label text-white text-uppercase position-absolute px-1">
-                        {{-- <span>{{ $comic['type'] }}</span> --}}
+                        <span>{{ $comic['type'] }}</span>
                     </div>
                     <img src="{{ $comic->thumb }}" alt="">
                     <div class="view text-center text-white position-absolute">
@@ -28,7 +27,7 @@
                 <div class="price_wrapper d-flex align-items-center mb-3">
                     <div class="price d-flex justify-content-between ">
                         <div class="px-3 text-white text-opacity-50">U.S. Price <span
-                                class="text-white">{{ $comic->price }}</span>
+                                class="text-white">{{ $comic->price }} $</span>
                         </div>
                         <div class="px-3 text-white text-opacity-50">AVAILABLE</div>
                     </div>
@@ -116,7 +115,7 @@
                             </div>
 
                             <div class="col-8 fs_12 text-start">
-                                <span class="text-uppercase text-black">{{-- {{ $comic['sale_date'] }} --}}</span>
+                                <span class="text-uppercase text-black">{{ $comic['sale_date'] }}</span>
                             </div>
                         </div>
                     </div>
