@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comic extends Model
 {
-    protected $fillable = ['title', 'description', 'thumb', 'price', 'series', 'sale_data', 'type'];
+    protected $fillable = ['title', 'description', 'thumb', 'price', 'series', 'sale_date', 'type'];
 }
