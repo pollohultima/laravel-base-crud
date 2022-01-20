@@ -49,16 +49,6 @@ class ComicController extends Controller
             'type'=> 'required',
         ]);
 
-        $_comic = new Comic();
-        $_comic -> title = $validated_data['title'];
-        $_comic -> description = $validated_data['description'];
-        $_comic -> thumb = $validated_data ['thumb'];
-        $_comic -> price = $validated_data ['price'];
-        $_comic -> series = $validated_data ['series'];
-        $_comic -> sale_date = $validated_data['sale_date'];
-        $_comic -> type = $validated_data ['type'];
-        $_comic -> save();
-
         Comic::create($validated_data);
 
         return redirect()->route('comics');
