@@ -38,16 +38,28 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        $validated_data = $request->validate([
+            'title'=> 'required',
+            'description'=> 'required',
+            'thumb'=> 'nullable',
+            'price'=> 'required',
+            'series'=> 'required',
+            'sale_date'=> 'required',
+            'type'=> 'required',
+        ]);
+
         $_comic = new Comic();
-        $_comic -> title = $request -> title;
-        $_comic -> description = $request -> description;
-        $_comic -> thumb = $request -> thumb;
-        $_comic -> price = $request -> price;
-        $_comic -> series = $request -> series;
-        $_comic -> sale_date = $request -> sale_date;
-        $_comic -> type = $request -> type;
+        $_comic -> title = $validated_data['title'];
+        $_comic -> description = $validated_data['description'];
+        $_comic -> thumb = $validated_data ['thumb'];
+        $_comic -> price = $validated_data ['price'];
+        $_comic -> series = $validated_data ['series'];
+        $_comic -> sale_date = $validated_data['sale_date'];
+        $_comic -> type = $validated_data ['type'];
         $_comic -> save();
+
+        Comic::create($validated_data);
 
         return redirect()->route('comics');
     }
@@ -60,7 +72,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-         return view('comics.show', compact('comic'));
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -71,8 +83,9 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
+    
 
     /**
      * Update the specified resource in storage.
@@ -83,7 +96,19 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $validated_data = $request->validate([
+            'title'=> 'required',
+            'description'=> 'required',
+            'thumb'=> 'nullable',
+            'price'=> 'required',
+            'series'=> 'required',
+            'sale_date'=> 'required',
+            'type'=> 'required',
+        ]);
+
+        $comic->update($validated_data);
+
+        return redirect()->route('comics');
     }
 
     /**
@@ -94,6 +119,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route('comics');
     }
 }

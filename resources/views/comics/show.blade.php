@@ -12,8 +12,8 @@
                         <span>{{ $comic->type }}</span>
                     </div>
                     <img style="
-        width: 200px;
-    " class="thumb_show" src="{{ $comic->thumb }}" alt="">
+                        width: 200px;
+                    " class="thumb_show" src="{{ $comic->thumb }}" alt="">
                     <div class="view text-center text-white position-absolute">
                         <span>VIEW GALLERY</span>
                     </div>
@@ -107,7 +107,7 @@
                             </div>
 
                             <div class="col-8 fs_12 text-start">
-                                <span class="text-uppercase text-black">{{ $comic->price }}</span>
+                                <span class="text-uppercase text-black">{{ $comic->price }} $</span>
                             </div>
                         </div>
 
@@ -117,7 +117,7 @@
                             </div>
 
                             <div class="col-8 fs_12 text-start">
-                                <span class="text-uppercase text-black">{{ $comic['sale_date'] }}</span>
+                                <span class="text-uppercase text-black">{{ $comic->sale_date }}</span>
                             </div>
                         </div>
                     </div>

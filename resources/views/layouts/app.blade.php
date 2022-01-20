@@ -18,6 +18,7 @@
     @include('partials.footer')
     <!-- /#site_footer -->
 
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

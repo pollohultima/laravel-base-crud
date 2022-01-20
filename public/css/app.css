@@ -11415,6 +11415,10 @@ textarea.form-control-lg {
 }
 
 /* Comic */
+.thumb_show {
+  width: 200px !important;
+}
+
 .comic .comic_header {
   height: 80px;
   background-color: #0282f9;
