@@ -40,7 +40,7 @@ class ComicController extends Controller
     public function store(Request $request)
     {   
         $validated_data = $request->validate([
-            'title'=> 'required',
+            'title'=> 'required | unique:comics',
             'description'=> 'required',
             'thumb'=> 'nullable',
             'price'=> 'required',
@@ -97,7 +97,7 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $validated_data = $request->validate([
-            'title'=> 'required',
+            'title'=> 'required |unique:comics',
             'description'=> 'required',
             'thumb'=> 'nullable',
             'price'=> 'required',
