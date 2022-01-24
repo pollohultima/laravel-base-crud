@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('partials.tag_head')
+
+<head>
+    @include('partials.tag_head')
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+</head>
 
 
 <body>
