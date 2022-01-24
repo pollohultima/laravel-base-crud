@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('page-title', 'Comic Page')
 
@@ -12,8 +12,8 @@
                         <span>{{ $comic->type }}</span>
                     </div>
                     <img style="
-                        width: 200px;
-                    " class="thumb_show" src="{{ $comic->thumb }}" alt="">
+                            width: 200px;
+                        " class="thumb_show" src="{{ $comic->thumb }}" alt="">
                     <div class="view text-center text-white position-absolute">
                         <span>VIEW GALLERY</span>
                     </div>

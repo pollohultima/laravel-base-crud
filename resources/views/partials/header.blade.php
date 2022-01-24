@@ -16,7 +16,7 @@
                 <a href="{{ route('admin.comics.index') }}"
                     class="{{ Route::currentRouteName() === 'comics' ? 'active' : '' }}">COMICS<span
                         class=""></span></a>
-                <a href="">MOVIES</a>
+                <a href="{{ route('admin.posts.index') }}">POSTS</a>
                 <a href="">TV</a>
                 <a href="">GAMES</a>
                 <a href="">COLLECTIBLES</a>

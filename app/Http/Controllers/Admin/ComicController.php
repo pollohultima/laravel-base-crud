@@ -98,7 +98,7 @@ class ComicController extends Controller
 
         $comic->update($validated_data);
 
-        return redirect()->route('admin.comics.index');
+        return redirect()->route('admin.comics.index')->with('message', "You've modified a comic!");
     }
 
     /**
@@ -111,6 +111,6 @@ class ComicController extends Controller
     {
         $comic->delete();
 
-        return redirect()->route('admin.comics.index');
+        return redirect()->route('admin.comics.index')->with('message', "You've deleted a comic");
     }
 }

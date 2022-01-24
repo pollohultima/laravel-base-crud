@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -37,7 +37,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">Save</button>
+            <button type="submit" class="btn btn-primary my-3">Save</button>
 
         </form>
 

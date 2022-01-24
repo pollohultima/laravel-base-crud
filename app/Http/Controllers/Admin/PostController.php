@@ -85,7 +85,7 @@ class PostController extends Controller
 
         $post->update($validated_data);
 
-        return redirect()->route('admin.posts.index')->with('message', 'complimenti modificato un post');
+        return redirect()->route('admin.posts.index')->with('message', "You've modified a post!");
     }
 
     /**
@@ -98,6 +98,6 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('admin.posts.index')->with('message', 'Oh No imbecille, guarda che hai cancellato un post');
+        return redirect()->route('admin.posts.index')->with('message', "You've deleted a post");
     }
 }

@@ -11245,6 +11245,12 @@ textarea.form-control-lg {
 }
 /* Variables */
 /* Common */
+main {
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
 .cont {
   width: 1250px;
 }

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -9,6 +9,12 @@
             <a name="" id="" class="btn btn-primary" href="{{ route('admin.posts.create') }}" role="button">Create</a>
 
         </div>
+
+        @if (session('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
 
         @foreach ($posts as $post)
             <div class="row mb-3">
