@@ -14,14 +14,14 @@
                     <div class="col-2 px-0">
 
                         <div class="card border-0">
-                            <a class="text-decoration-none" href="{{ route('comics.show', $comic->id) }}">
+                            <a class="text-decoration-none" href="{{ route('admin.comics.show', $comic->id) }}">
                                 <img src="{{ $comic->thumb }}" alt="">
                                 <h6>{{ $comic->series }}</h6>
                             </a>
                         </div>
                         <div class="buttons">
-                            <a class="btn btn-primary" href="{{ route('comics.show', $comic->id) }}">View</a>
-                            <a class="btn btn-primary" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
+                            <a class="btn btn-primary" href="{{ route('admin.comics.show', $comic->id) }}">View</a>
+                            <a class="btn btn-primary" href="{{ route('admin.comics.edit', $comic->id) }}">Edit</a>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                 data-bs-target="#delete{{ $comic->id }}">
@@ -44,7 +44,7 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
                                                 data-bs-dismiss="modal">Close</button>
-                                            <form action="{{ route('comics.destroy', $comic->id) }}" method="post">
+                                            <form action="{{ route('admin.comics.destroy', $comic->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
 
@@ -63,7 +63,7 @@
             </div>
             <div class="load">
                 <button>
-                    <a href="{{ route('comics.create') }}">UPLOAD COMICS</a>
+                    <a href="{{ route('admin.comics.create') }}">UPLOAD COMICS</a>
                 </button>
             </div>
         </div>

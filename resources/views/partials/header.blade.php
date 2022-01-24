@@ -13,7 +13,7 @@
 
             <nav class="menu d-flex align-items-middle ">
                 <a href="">CHARACTERS</a>
-                <a href="{{ route('comics') }}"
+                <a href="{{ route('admin.comics.index') }}"
                     class="{{ Route::currentRouteName() === 'comics' ? 'active' : '' }}">COMICS<span
                         class=""></span></a>
                 <a href="">MOVIES</a>
