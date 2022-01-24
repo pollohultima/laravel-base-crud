@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -17,13 +17,6 @@
             {{ $post->body }}
 
         </div>
-
-
-
-
-
-
-
 
     </div>
 
